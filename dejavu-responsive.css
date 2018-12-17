@@ -1,0 +1,68 @@
+/*MEDIA QUERIES DEJA VU*/
+@media only screen and (max-width: 1400px) {
+  .gallery {
+    width: 0;
+  }
+  .side-title {
+    width: 0;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .info {
+    height: 100%;
+    overflow: hidden;
+    min-width: 320px;
+  }
+  .content {
+    display: block;
+    overflow: auto;
+    min-width: 320px;
+  }
+  .headline ul {
+    display: none;
+  }
+  .headline {
+    margin-bottom: 15px;
+  }
+  .row-1 {
+    overflow: unset;
+  }
+  .text {
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+    flex: auto;
+  }
+  .txt {
+    height: auto;
+  }
+  .row-2 {
+    flex-direction: column;
+    flex: auto;
+  }
+  .bubbles {
+    border-right: none;
+  }
+  .quote, .bubbles {
+    padding: 10px
+  }
+  .side-title {
+    width: 0;
+    font-size: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .tab {
+    max-width: 640px;
+    flex-wrap: wrap;
+  }
+  .info {
+    height: auto;
+  }
+  .details {
+    flex: 1;
+    width: auto;
+  }
+}
