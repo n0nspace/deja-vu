@@ -24,20 +24,20 @@
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
   <!--You can find all color settings at the beginning of the style tag.
-  All of the colors and some other details are changeable through this variables.
+  All of the colors and some other details are changeable through this     
+  variables.
   Hopefully that makes it easier to customise!
 
-  If you want individual colors for each character you will need to either style
-  it inline or make a new class, add it in the CSS & then add it to the Characters
-  tab.
+  If you want individual colors for each character you will need to 
+  either style it inline or make a new class, add it in the CSS & then 
+  add it to the Characters tab.
 
   To add more tabs:
-    1. Copy/paste a new entry within the navigation. I've marked what you need to copy.
-       You can search for "Copy here". Change the 'data-tab' to tab-x (x being
-       a number not used before, e.g. tab-6)
-    2. Copy/paste a new tab. Important! Make sure your new tab does NOT have the
-       'current' class; change its ID to tab-x (see above (they must match!!)
-       e.g. tab-6),
+    1. Copy/paste a new entry within the navigation. 
+       I've marked what you need to copy. You can search for "Copy here".          Change the 'data-tab' to tab-x (x being a number not used before, 
+       e.g. tab-6)
+    2. Copy/paste a new tab. Important! Make sure your new tab does NOT have        the 'current' class; change its ID to tab-x (see above 
+       (they must match!!) e.g. tab-6),
 
   -->
   <style>
@@ -445,10 +445,11 @@ main {
   color: #1e1e1e;
 }
 
-.bubbles {
+.bubbles { 
   flex: 1;
   padding: 10px 20px 10px 0px;
   border-right: 1px dashed var(--borderColor);
+  height: 100%;
 }
 
 .bubbles ul {
@@ -468,7 +469,7 @@ main {
   width: auto;
   padding: 5px;
   margin: 5px 2.5px 5px;
-  background: #FF416C;  /* fallback for old browsers */
+  background: var(--accentColorOne);  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, var(--accentColorOne), var(--accentColorTwo));  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, var(--accentColorOne), var(--accentColorTwo)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -565,7 +566,7 @@ nav {
   </style>
 
   <!--MOBILE STYLES-->
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/nnspce/deja-vu/master/dejavu-responsive.css">
+  <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1YhHjX9QD1fzQ03jjOrSqN1oTWJOAcyy3" />
 
 </head>
 <body>
@@ -1149,6 +1150,7 @@ nav {
   <!--DO NOT TOUCH THE SCRIPTS UNLESS YOU KNOW WHAT YOU'RE DOING-->
   <script>
   $( document ).ready(function() {
+
     $('nav li').on('click', function(e) {
       var currentAttrValue = $(this).attr('data-tab');
 
