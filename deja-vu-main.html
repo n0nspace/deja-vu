@@ -170,16 +170,34 @@ nav {
   content: "\f054";
 }
 
+nav h2 {
+    position: relative;
+    z-index: 99;
+}
+
 /*navigation*/
 nav ul {
-  margin-top: 0px;
+  padding-top: 65px;
   position: absolute;
-  width: 280px;
-  top: 65px;
+  width: 335px;
+  top: 0px;
   height: 100%;
   overflow-y: auto;
   padding-bottom: 100px;
   z-index: 9;
+}
+
+nav ul::-webkit-scrollbar {
+  margin-top: -65px;
+  width: 5px;
+  height: 8px;
+  background-color: #f8f8f8;
+}
+
+nav ul::-webkit-scrollbar-thumb {
+    background: var(-accentColorOne); 
+    background: -webkit-linear-gradient(to bottom, var(--accentColorOne), var(--accentColorTwo));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, var(--accentColorOne), var(--accentColorTwo)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 nav ul li {
