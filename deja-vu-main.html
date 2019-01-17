@@ -28,9 +28,8 @@
   variables.
   Hopefully that makes it easier to customise!
 
-  If you want individual colors for each character you will need to 
-  either style it inline or make a new class, add it in the CSS & then 
-  add it to the Characters tab.
+  If you want individual colors per tab/character you will need to 
+  enable it below in "Color per tab toggle". This is disabled by default.
 
   To add more tabs:
     1. Copy/paste a new entry within the navigation. 
@@ -40,12 +39,32 @@
        (they must match!!) e.g. tab-6),
 
   -->
+  
+  <!--COLOR PER TAB TOGGLE-->
+  <script type="text/javascript">
+    /*This lets you enable/disable different colors per tab.
+      true = enabled, false =disabled*/
+    var colorPerTab = false;
+  </script>
   <style>
 /*SETTINGS & COLORS*/
 :root {
   /*colors*/
   --accentColorOne: #FF4B2B;
   --accentColorTwo: #FF416C;
+ 
+  /*color per tab if enabled above*/
+  --accentColorOne-1: #FFF;
+  --accentColorTwo-1: #FFF;
+  --accentColorOne-2: #FFF;
+  --accentColorTwo-2: #FFF;
+  --accentColorOne-3: #FFF;
+  --accentColorTwo-3: #FFF;
+  --accentColorOne-4: #FFF;
+  --accentColorTwo-4: #FFF;
+  --accentColorOne-5: #FFF;
+  --accentColorTwo-5: #FFF;
+  
   --colorOne: #1e1e1e;
   --colorTwo: #111;
   --fontColor: #1e1e1e;
@@ -1219,6 +1238,20 @@ nav {
         $('#close').addClass('x'); 
       }
     });
+    
+    /*color per tab*/
+    if( colorPerTab === true) {
+      var i = 1;
+      $(".tab").each(function() {
+        var thisNext = $(this).find("nav ul, .bar, .bubbles ul li");
+        thisNext.css({
+          "background" : "var(--accentColorOne-" + i + ")",
+          "background" : "-webkit-linear-gradient(to bottom, var(--accentColorOne-" + i + "), var(--accentColorTwo-" + i + "))",
+          "background" : "linear-gradient(to bottom, var(--accentColorOne-" + i + "), var(--accentColorTwo-" + i + "))"
+        });
+       i++;
+      });
+    }
 
   });/*document ready*/
   </script>
