@@ -750,7 +750,7 @@ nav {
     <main>
       <!--TAB ONE-->
       <div class="tab current" id="tab-1">
-        <div class="bar">
+        <div class="bar colored">
           <div class="bar-links">
             <ul>
               <li><a href="/tagged/TAG" >
@@ -875,7 +875,7 @@ nav {
 <!----------------------COPY HERE---------------------->
       <!--TAB TWO-->
       <div class="tab" id="tab-2">
-        <div class="bar">
+        <div class="bar colored">
           <div class="bar-links">
             <ul>
               <li><a href="/tagged/TAG" >
@@ -998,7 +998,7 @@ nav {
 
       <!--TAB THREE-->
       <div class="tab" id="tab-3">
-        <div class="bar">
+        <div class="bar colored">
           <div class="bar-links">
             <ul>
               <li><a href="/tagged/TAG" >
@@ -1102,7 +1102,7 @@ nav {
 
       <!--TAB FOUR-->
       <div class="tab" id="tab-4">
-        <div class="bar">
+        <div class="bar colored">
           <div class="bar-links">
             <ul>
               <li><a href="/tagged/TAG" >
@@ -1206,7 +1206,7 @@ nav {
 
       <!--TAB FIVE-->
       <div class="tab" id="tab-5">
-        <div class="bar">
+        <div class="bar colored">
           <div class="bar-links">
             <ul>
               <li><a href="/tagged/TAG" >
@@ -1392,7 +1392,7 @@ nav {
     if( colorPerTab === true) {
       var i = 1;
       $(".tab").each(function() {
-        var thisNext = $(this).find("nav ul, .bar, .bubbles ul li");
+        var thisNext = $(this).find("nav ul, .bar.colored, .bubbles ul li");
         thisNext.css({
           "background" : "var(--accentColorOne-" + i + ")",
           "background" : "-webkit-linear-gradient(to bottom, var(--accentColorOne-" + i + "), var(--accentColorTwo-" + i + "))",
