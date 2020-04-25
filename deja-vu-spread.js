@@ -26,7 +26,6 @@ function createContent(data) {
   //iterate through templates
   for (i = 0; i < templateList.length; i++) {
     let source = $(templateList[i][0]).html();
-    console.log(source);
     let template = Handlebars.compile(source);
     let html = template(data);
     //write data into template
@@ -154,8 +153,7 @@ const contentLoaded = function() {
     /*iterate through tabs*/
     var i = 1;
     $(".tab").each(function() {
-      var thisNext = $(this).find("nav ul, .bar, .bubbles ul li");
-      console.log(thisNext);
+      var thisNext = $(this).find("nav ul, .bar.colored, .bubbles ul li");
       thisNext.css({
         "background": "var(--accentColorOne-" + i + ")",
         "background": "-webkit-linear-gradient(to bottom, var(--accentColorOne-" + i + "), var(--accentColorTwo-" + i + "))",
