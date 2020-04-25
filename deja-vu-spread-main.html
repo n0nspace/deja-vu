@@ -55,6 +55,37 @@
 
     var sheetID = '1XtKMjv_jjM0kMZ0WIrvU2aWfMsDhZLYm_hpldy8Scdo';
 
+    /*1. NAVIGATION
+    In the HTML you will find the template for the navigation items within a script tag
+    with the ID: handlebars-template-nav. This will be the base of all generated items.
+
+    The content in it is replace by variables that look like this:
+      {{this.spreadsheetcolumnname}}
+    They are placeholders for the content of each item. You can customise the html
+    as you usually would. Any content you want to pull from the spreadsheet needs
+    to be written like the above. "spreadsheetcolumnname" is what you replace with
+    the column name in your spreadsheet. Important: The it needs to be in all
+    lowercase and without the spaces. Special characters may cause problems.
+
+    Example:
+
+    You want to add a character's age to the grid item. The headline of the column
+    in your spreadsheet with the info is "AGE". Where you would usually write the
+    age in the html you instead put: {{this.age}}
+
+    HTML IN SPREADSHEET
+
+    If you want to be able to use HTML tags in the spreadsheet and have them carry
+    over to the theme (for example paragraphs for biography text) you can do that
+    by wrapping the variables in 3 curly bracketsinstead of 2.
+
+    {{{this.bio}}} will escape HTML {{this.bio}} will write HTML tags as text.
+
+    2. TABS
+    Same as the above. The template ID is: handlebars-template-tab.
+
+    */
+
     /*This lets you enable/disable different colors per tab.
       true = enabled, false = disabled*/
     var colorPerTab = false;
